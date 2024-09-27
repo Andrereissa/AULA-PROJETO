@@ -4,14 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registre-se</title>
+    <link rel="stylesheet" href="style-form.css">
 </head>
 <body>
-    <div class="form.container">
-        <form action="Registro" method="post">
-            
+    <div class="form-container">
+        <form action="registro" method="post">
+           <label for="nome-user">Nome completo:</label> 
+           <input type="text" name="nome-user" id="nome-user" minlength="15" maxlength="60" required><br>
+
+           <label for="nascimento">Data de Nascimento:</label> 
+           <input type="date" name="nascimento" id="nascimento"><br>
+
+           <label for="gender">Sexo:</label> 
+           <select name="gender" id="gender" required>
+             <option value="womam">Feminino</option>
+             <option value="man">Masculino</option>
+           </select><br>
+
+           <!--<label for="mother-name">Nome da mãe:</label> 
+           <input type="text" name="mother-name" id="mother-name" minlength="15" maxlength="60"><br>-->
+
+           <label for="cpf">CPF:</label> 
+           <input type= "text" name="cpf" id="cpf" placeholder="000.000.000-00"><br>
+
+           <label for="celular">Whatsapp:</label> 
+           <input type="text" name="celular" id="celular" placeholder="+55 (00) 00000-000"><br>
+
+           <!--<label for="tel-fix">Telefone:</label> 
+           <input type="text" name="tel-fix" id="tel-fix" placeholder="+55 (00) 0000-0000"><br>-->
+           
+           <label for="endereço">Endereço Completo:</label> 
+           <input type="text" name="endereço"><br>
+           
+           <!--<label for="user">Login:</label> 
+           <input type="text" name="user" minlength="6" maxlength="12"><br>-->
+           
+           <label for="pswd">Senha:</label> 
+           <input type="password" name="pswd" id="pswd" minlength="8" maxlength="8"><br>
+
+           <label for="conf-pswd">Confirmar Senha:</label> 
+           <input type="password" name="conf-pswd" id="conf-pswd" minlength="8" maxlength="8"><br>
+
+           <button type="submit">Enviar</button>
         </form>
-
-
     </div>
 </body>
 </html>
+
+            
+
