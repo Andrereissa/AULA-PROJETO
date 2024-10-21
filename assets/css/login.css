@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0; /* Adiciona um background neutro */
+}
+
+.container-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right-login {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.left-login {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cardLogin {
+    width: 50%;
+    background-color: #fa5801;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 0px 10px 20px #00000060;
+    border-radius: 20px;
+}
+
+.cardLogin > h1 {
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.login > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 3px 2px 3px #0000007a;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.login > input::placeholder {
+    color: #FA5901;
+}
+
+.login > input > ::placeholder:focus {
+    color: transparent;
+}
+
+.login > label {
+    color: #fff;
+    font-weight: 800;
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.cardLogin > a {
+    color: #fff;
+    font-size: 8pt;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    margin-top: 0;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.cardLogin > a:hover {
+   text-decoration: underline;
+
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 5px;
+    border-radius: 10px;
+    color: #FA5901;
+    font-weight: 800;
+    font-size: 12pt;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease;
+    width: 30%;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: transparent;
+    color: #fff;
+    outline: 1px solid;
+}
+
+
+.tittle-login > h1 {
+    text-shadow: 3px 0.5px 30px #00000040;
+}
+.tittle-login > p {
+    color: #FA5901;
+    text-shadow: 0px 0.5px 1px #00000060;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .container-login {
+        flex-direction: column;
+    }
+
+    .left-login, .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login {
+        margin-bottom: 20px;
+    }
+
+    .cardLogin {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardLogin > h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 10pt;
+    }
+
+    .login > input {
+        padding: 12px;
+    }
+
+    .container-login {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardLogin {
+        padding: 20px;
+    }
+
+    .cardLogin > h1 {
+        font-size: 1.2rem;
+    }
+
+    .login > input {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 10pt;
+        padding: 8px;
+    }
+}
