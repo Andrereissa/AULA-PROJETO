@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - FMZ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>Checkout - FMZ</header>
+
+    <div class="main-container">
+      <!-- Formulário de Checkout -->
+      <div class="container">
+        <h2>Finalize seu pedido</h2>
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="name">Nome completo:</label>
+            <input type="text" id="name" required />
+            <div class="error-message" id="name-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required />
+            <div class="error-message" id="email-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" required />
+            <div class="error-message" id="address-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="number">Número do cartão:</label>
+            <input type="number" id="number" maxlength="16" required />
+            <div class="error-message" id="card-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="expiration">Data de expiração:</label>
+            <input
+              type="text"
+              id="expiration"
+              maxlength="4"
+              placeholder="MM/AA"
+              required
+            />
+            <div class="error-message" id="expiration-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <input type="number" id="cvv" maxlength="3" required />
+            <div class="error-message" id="cvv-error"></div>
+          </div>
+
+          <h3>Formas de pagamento</h3>
+          <div class="payment-methods">
+            <!-- Imagens de forma de pagamento -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Visa_Logo.png"
+              alt="Visa"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+              alt="Mastercard"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Elo_card_logo.png"
+              alt="Elo"
+            />
+          </div>
+
+          <button type="submit" class="submit-btn">Finalizar Compra</button>
+        </form>
+      </div>
+
+      <!-- Carrinho de Compras -->
+      <div class="cart-container">
+        <h3>Seu Carrinho</h3>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-total" id="cart-total">Total: R$ 0,00</div>
+      </div>
+    </div>
+
+    <footer>© 2024 FMZ Hamburgueria</footer>
+
+    <script>
+      // Função para limitar o número de dígitos no campo de número do cartão e CVV
+      document.getElementById("number").addEventListener("input", function (e) {
+        if (this.value.length > 16) this.value = this.value.slice(0, 16)
+      })
+
+      document.getElementById("cvv").addEventListener("input", function (e) {
+        if (this.value.length > 3) this.value = this.value.slice(0, 3)
+      })
+
+      document
+        .getElementById("expiration")
+        .addEventListener("input", function (e) {
+          if (this.value.length > 5) this.value = this.value.slice(0, 5)
+        })
+
+      // Função para carregar o carrinho de compras
+      function loadCart() {
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || []
+        let cartContainer = document.getElementById("cart-items")
+        let cartTotalElement = document.getElementById("cart-total")
+        let total = 0
+
+        cartContainer.innerHTML = ""
+
+        cartItems.forEach((item) => {
+          let itemElement = document.createElement("div")
+          itemElement.classList.add("cart-item")
+          itemElement.innerHTML = `<span>${
+            item.name
+          }</span><span>R$ ${item.price.toFixed(2)}</span>`
+          cartContainer.appendChild(itemElement)
+          total += item.price
+        })
+
+        cartTotalElement.innerHTML = `Total: R$ ${total.toFixed(2)}`
+      }
+
+      window.onload = loadCart
+
+      // Alerta ao finalizar compra
+      document
+        .getElementById("checkout-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault()
+          alert("Seu pedido já está sendo preparado e chegará em breve! 😊")
+        })
+    </script>
+  </body>
+</html>
