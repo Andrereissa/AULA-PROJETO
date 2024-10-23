@@ -13,6 +13,7 @@ body {
   width: 60%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -75,6 +76,13 @@ nav a:hover {
   margin-left: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+  
+}
+
+.search-bar button a{
+  text-decoration: none;
+  color:white;
+
 }
 
 .search-bar button:hover {
@@ -105,10 +113,23 @@ h1 {
 }
 
 .menu {
+  display: block;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.menu > h2  { 
+  text-align: center;
+  color: rgb(10 10 10 / 79%);
+}
+
+.submenu {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-evenly;
+
 }
 
 .card {
@@ -212,6 +233,58 @@ h1 {
   justify-content: center;
   margin-left: 10px;
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FA5901;
+  padding: 10px;
+  margin-bottom: 0;
+  width: 133%;
+  height: 80px;
+  z-index: 1000;
+  border-radius: 10px 10px 0px 0px;
+  margin-top: 15px;
+
+}
+
+.rodape {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.fmz  {
+  width: 250px;
+  height: 100px;
+}
+
+.fmz > h1 {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.fmz > h2 {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.suporte {
+  width: 250px;
+  height: 100px;
+}
+
+.suporte > h1 {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.suporte > h2 {
+  font-size: 0.7em;
+  text-align: center;
+}
+
 
 /* Media Queries para responsividade */
 @media (max-width: 1200px) {
