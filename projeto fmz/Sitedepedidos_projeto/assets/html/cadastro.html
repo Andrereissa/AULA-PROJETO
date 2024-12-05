@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/cadastro.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container-card">
+        <div class="card">
+          <h1>Cadastro</h1>
+
+          <div id="msgError"></div>
+          <div id="msgSuccess"></div>
+
+          <div class="label-float">
+            <input type="email" name="email" id="userEmail" /><br />
+            <label id="labelEmail" for="userEmail">E-mail</label>
+          </div>
+
+          <div class="label-float">
+            <!--Solicita telefone para contato-->
+            <input
+              type="tel"
+              name="celular"
+              id="contCelular"
+              placeholder=" "
+              required
+            /><br />
+            <label id="labelCelular" for="celular">Whatsapp</label>
+          </div>
+
+          <div class="label-float">
+            <!--Solicita uma senha para cadastro-->
+            <input
+              type="password"
+              name="pswd"
+              id="pswd"
+              placeholder=" "
+              required
+            /><br />
+            <label id="labelPswd" for="pswd">Senha</label>
+            <i id="verpswd" class="fa fa-eye" aria-hidden="true"></i>
+          </div>
+
+          <div class="label-float">
+            <!--Solicita a confirmação da senha-->
+            <input
+              type="password"
+              name="conf-pswd"
+              id="confPswd"
+              placeholder=" "
+              required
+            /><br />
+            <label id="labelconfPswd" for="conf-pswd">Confirmar Senha</label>
+            <i id="verconfPswd" class="fa fa-eye" aria-hidden="true"></i>
+          </div>
+
+          <div class="justify-center">
+            <button   onclick="cadastrar()"> <a href="http://127.0.0.1:5501/"></a>Enviar</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-intro">
+        <h2>
+            Aqui é a sua porta de entrada<br>
+            para uma experiência inovadora<br>
+            no mundo dos sites de delivery.
+        </h2>
+      </div>
+    </div>
+    <script src="../js/cadastro.js"></script>
+    <!--<div class="container-image">
+        <img src="../images/1.png" alt="Hamburger">
+    </div>-->
+  </body>
+</html>
