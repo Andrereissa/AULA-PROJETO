@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <script src="/assets/js/index.js"></script>
+    <title>FMZ, sua platataforma de pedidos</title>
+  </head>
+  <body>
+    <div class="card-full">
+      <nav>
+         <div class="search-bar">
+            <input type="text" id="search" placeholder="Pesquisar no menu..." />
+            <button onclick="pesquisarProduto()">Buscar</button>
+            <button>
+              <a href="#hamburguerlink">
+                Hambúrger
+              </a>
+            </button>
+            <button>
+              <a href="#bebidas">
+                Bebidas
+              </a>
+            </button>
+            <button>
+              <a href="#acompanhamento">
+                Acompanhamento
+              </a>
+              
+            </button>
+          </div>
+            <a class="login-icon" href="http://127.0.0.1:5501/assets/html/login.html"
+        >Login<img
+        src="https://img.icons8.com/ios-glyphs/30/ffffff/user.png"
+         alt="Login"/></a>
+
+      </nav>
+
+      <div class="main-container">
+        <div class="container">
+          <div id="hamburguerlink"> </div>
+          <h1>Menu</h1>
+          <div class="menu">
+            <h2>Hambúrguer</h2> 
+            <div id="Hamburguer" class="submenu">
+              <div class="card">
+                <h3>Hambúrguer 1</h3>
+                <img
+                  src="/assets/images/ham1.jpg"
+                  alt="Hambúrguer"
+                  style="width: 180px; border-radius: 10px"
+                />
+                <p>R$10,00</p>
+                <label for="burgerQty">Quantidade:</label>
+                <input
+                  type="number"
+                  id="burgerQty"
+                  name="burgerQty"
+                  min="1"
+                  value="1"
+                />
+                <button
+                  onclick="addToCart('Hambúrguer', 10, document.getElementById('burgerQty').value)"
+                >
+                  Adicionar ao Carrinho
+                </button>
+              </div>
+
+              <div class="card">
+                  <h3>Hambúrguer 2</h3>
+                  <img
+                    src="/assets/images/ham1.jpg"
+                    alt="Hambúrguer"
+                    style="width: 180px; border-radius: 10px"
+                  />
+                              
+                  <p>R$10,00</p>
+                  <label for="burgerQty">Quantidade:</label>
+                  <input
+                    type="number"
+                    id="burgerQty"
+                    name="burgerQty"
+                    min="1"
+                    value="1"
+                  />
+                  <button
+                    onclick="addToCart('Hambúrguer', 10, document.getElementById('burgerQty').value)"
+                  >
+                    Adicionar ao Carrinho
+                  </button>
+                </div>
+
+                <div class="card">
+                  <h3>Hambúrguer 3</h3>
+                  <img
+                    src="/assets/images/ham1.jpg"
+                    alt="Hambúrguer"
+                    style="width: 180px; border-radius: 10px"
+                  />
+                  <p>R$10,00</p>
+                  <label for="burgerQty">Quantidade:</label>
+                  <input
+                    type="number"
+                    id="burgerQty"
+                    name="burgerQty"
+                    min="1"
+                    value="1"
+                  />
+                  <button
+                    onclick="addToCart('Hambúrguer', 10, document.getElementById('burgerQty').value)"
+                  >
+                    Adicionar ao Carrinho
+                  </button>
+                </div>
+    
+    
+
+              <div class="card">
+                <h3>Pizza</h3>
+                <img
+                  src="/assets/images/piz1.jpg"
+                  alt="pizza"
+                  style="width: 180px; border-radius: 10px"
+                />
+                <p>R$20,00</p>
+                <label for="pizzaQty">Quantidade:</label>
+                <input
+                  type="number"
+                  id="pizzaQty"
+                  name="pizzaQty"
+                  min="1"
+                  value="1"
+                />
+                <button
+                  onclick="addToCart('Pizza', 20, document.getElementById('pizzaQty').value)"
+                >
+                  Adicionar ao Carrinho
+                </button>
+              </div>
+
+                       
+            </div> 
+            <h2>Bebidas</h2>                       
+            <div id="bebidas" class="submenu">
+              <div class="card">
+                <h3>Refrigerante</h3>
+                <img
+                  src="assets/images/ref1.jpg"
+                  alt="refrigerante"
+                  style="width: 180px; border-radius: 10px"
+                />
+                <p>R$3,00</p>
+                <label for="sodaQty">Quantidade:</label>
+                <input
+                  type="number"
+                  id="sodaQty"
+                  name="sodaQty"
+                  min="1"
+                  value="1"
+                />
+                <button
+                  onclick="addToCart('Refrigerante', 3, document.getElementById('sodaQty').value)"
+                >
+                  Adicionar ao Carrinho
+                </button>
+              </div>
+            </div>
+            <h2>Acompanhamento</h2>
+            <div id="acompanhamento" class="submenu">
+              <div class="card">
+                <h3>Batata Frita</h3>
+                <img
+                  src="/assets/images/fries1.jpg"
+                  alt="fries"
+                  style="width: 180px; border-radius: 10px"
+                />
+                <p>R$5,00</p>
+                <label for="friesQty">Quantidade:</label>
+                <input
+                  type="number"
+                  id="friesQty"
+                  name="friesQty"
+                  min="1"
+                  value="1"
+                />
+                <button
+                  onclick="addToCart('Batata Frita', 5, document.getElementById('friesQty').value)"
+                >
+                  Adicionar ao Carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cart-sidebar">
+          <h2>Carrinho de pedidos</h2>
+          <ul id="cartItems"></ul>
+          <p id="totalPrice"></p>
+          <button onclick="submitOrder()">Finalizar Pedido</button>
+        </div>
+      </div>
+      <footer>
+        <div class="rodape">
+          <div class="fmz">
+            <h1>Social</h1>
+            <!-- Botão para o Instagram -->
+            <a href="https://www.instagram.com" target="_blank" class="btn btn-instagram">
+              <button>Instagram</button>
+            </a>
+          </div>
+          <div class="suporte">
+            <h1>Fale conosco</h1>
+            <!-- Botão para o WhatsApp -->
+            <a href="https://chat.whatsapp.com/Gj2xp6LikNK9AmUzuvDT4I" target="_blank" class="btn btn-whatsapp">
+              <button>WhatsApp</button>
+            </a>
+          </div>
+        </div>
+      </footer>
+      
+            
+
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
